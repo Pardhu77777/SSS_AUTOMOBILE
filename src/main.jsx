@@ -6,7 +6,7 @@ import "./styles.css";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/SSS_AUTOMOBILE">
       <App />
     </BrowserRouter>
   </React.StrictMode>
