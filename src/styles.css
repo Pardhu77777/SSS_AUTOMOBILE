@@ -1,0 +1,210 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.glass-nav {
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-glow {
+  box-shadow: 0 0 50px -12px rgba(37, 123, 244, 0.5);
+}
+
+.glass-effect {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(27, 32, 39, 0.7);
+  border: 1px solid rgba(156, 168, 186, 0.2);
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes softGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(37, 123, 244, 0);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(37, 123, 244, 0.28);
+  }
+}
+
+[data-reveal] {
+  animation: floatIn 0.8s ease both;
+}
+
+[data-reveal="slow"] {
+  animation-duration: 1.1s;
+}
+
+.lift-on-hover {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.lift-on-hover:hover,
+.lift-on-hover:active,
+.lift-on-hover:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+}
+
+.glow-on-hover:hover,
+.glow-on-hover:active,
+.glow-on-hover:focus-within {
+  animation: softGlow 1.6s ease-in-out infinite;
+}
+
+@keyframes heroSheen {
+  0% {
+    transform: translateX(-120%) skewX(-12deg);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(120%) skewX(-12deg);
+    opacity: 0;
+  }
+}
+
+.hero-sheen::after {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -20%;
+  width: 60%;
+  height: 180%;
+  background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.08) 50%, transparent 100%);
+  animation: heroSheen 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.hero-glow-orb {
+  filter: blur(120px);
+  opacity: 0.6;
+  animation: glowDrift 8s ease-in-out infinite alternate;
+}
+
+.hero-image-depth {
+  mask-image: radial-gradient(circle at 65% 50%, rgba(0, 0, 0, 0.8) 45%, rgba(0, 0, 0, 0) 75%);
+}
+
+@media (max-width: 1024px) {
+  .hero-image-depth {
+    mask-image: radial-gradient(circle at 70% 45%, rgba(0, 0, 0, 0.85) 55%, rgba(0, 0, 0, 0) 85%);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-image-depth {
+    mask-image: radial-gradient(circle at 60% 45%, rgba(0, 0, 0, 0.9) 60%, rgba(0, 0, 0, 0) 92%);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-bg-mobile {
+    background-position: 50% 40%;
+    transform: scale(1.0) !important;
+  }
+  .hero-bg-mobile-image {
+    background-image: url("/hero-mobile.jpg") !important;
+  }
+  .hero-image-depth {
+    mask-image: none;
+  }
+  .mobile-bg-scroll {
+    background-attachment: scroll !important;
+  }
+  .hero-mobile-static {
+    animation: none !important;
+    background-size: cover !important;
+  }
+}
+
+@keyframes slowZoom {
+  0% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1.08);
+  }
+}
+
+.bg-zoom {
+  animation: slowZoom 14s ease-in-out infinite alternate;
+}
+
+@keyframes panSlow {
+  0% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 60% 45%;
+  }
+}
+
+.bg-pan {
+  animation: panSlow 18s ease-in-out infinite alternate;
+}
+
+@keyframes glowDrift {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.45;
+  }
+  100% {
+    transform: translateY(-18px) translateX(12px);
+    opacity: 0.7;
+  }
+}
+
+.float-glow {
+  animation: glowDrift 6s ease-in-out infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    animation: none;
+  }
+  .lift-on-hover,
+  .glow-on-hover {
+    transition: none;
+    animation: none;
+  }
+  .hero-sheen::after,
+  .hero-glow-orb {
+    animation: none;
+  }
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  background: #0a0a0a;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.app-shell,
+.page {
+  width: 100%;
+  background: #0a0a0a;
+}

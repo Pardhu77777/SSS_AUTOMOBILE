@@ -1,0 +1,19 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1322" />
+      <stop offset="100%" stop-color="#1b2f4a" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2b8bff" />
+      <stop offset="100%" stop-color="#7ff0ff" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="200" cy="140" r="180" fill="#2b8bff" opacity="0.15" />
+  <circle cx="980" cy="520" r="220" fill="#7ff0ff" opacity="0.1" />
+  <rect x="120" y="170" width="960" height="290" rx="36" fill="#0f1b30" opacity="0.8" stroke="#2b8bff" stroke-opacity="0.35" />
+  <text x="180" y="280" font-family="Sora, sans-serif" font-size="54" fill="#f5f7fb" font-weight="700">SSS Automobile Limited</text>
+  <text x="180" y="350" font-family="Manrope, sans-serif" font-size="28" fill="#b9c6d8">Premium Auto Maintenance & Repair</text>
+  <rect x="180" y="380" width="220" height="10" rx="999" fill="url(#accent)" />
+</svg>
