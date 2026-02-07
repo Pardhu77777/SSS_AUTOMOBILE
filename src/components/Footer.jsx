@@ -78,6 +78,7 @@ export default function Footer() {
         </div>
         <div className="pt-2 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-2">
           <p className="text-white/20 text-xs">© 2026 SSS AUTOMOBILE LIMITED. All rights reserved.</p>
+          <p className="text-white/20 text-xs">Developed by Pardhu Mopidevi</p>
           <div className="flex gap-6">
             <NavLink className="text-white/20 hover:text-white transition-colors text-xs" to="/privacy">
               Privacy Policy
