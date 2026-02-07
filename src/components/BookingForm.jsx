@@ -1,7 +1,7 @@
 ﻿import { useState } from "react";
 import Icon from "./Icon.jsx";
 
-const emailRecipient = "service@sssautomobile.com";
+const emailRecipient = "sssautomobilelimited@gmail.com";
 
 const initialState = {
   name: "",

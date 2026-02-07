@@ -92,14 +92,14 @@ export default function Contact() {
                 </a>
                 <a
                   className="flex items-center gap-4 group p-2 rounded-lg hover:bg-white/5 transition-colors"
-                  href="mailto:service@sssautomobile.com"
+                  href="mailto:sssautomobilelimited@gmail.com"
                 >
                   <div className="w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary transition-colors">
                     <Icon name="mail" className="text-primary group-hover:text-white" size={20} />
                   </div>
                   <div>
                     <p className="text-xs font-bold text-white/40 uppercase">Email Support</p>
-                    <p className="text-lg font-bold">service@sssautomobile.com</p>
+                    <p className="text-lg font-bold">sssautomobilelimited@gmail.com</p>
                   </div>
                 </a>
               </div>
