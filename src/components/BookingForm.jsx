@@ -62,7 +62,7 @@ export default function BookingForm() {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            placeholder="+44 "
+            placeholder="+44 d"
             type="tel"
           />
           {errors.phone && <span className="text-red-300 text-xs">{errors.phone}</span>}
